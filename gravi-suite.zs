@@ -16,7 +16,6 @@ game.setLocalization("RelocatorPortal.name", "Relocator Portal");
 val pearl = <ThaumicTinkerer:skyPearl>;
 val telep = <IC2:blockMachine2>;
 val coolingCore = <GraviSuite:itemSimpleItem:2>;
-val sunAlloy = <AdvancedSolarPanel:asp_crafting_items:1>;
 val screen = <ore:itemIlluminatedPanel>;
 val cpu = <OpenComputers:item:43>;
 val supercond = <GraviSuite:itemSimpleItem:1>;

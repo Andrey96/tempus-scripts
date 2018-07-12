@@ -33,12 +33,10 @@ val carbon = <IC2:itemPartCarbonPlate>;
 val rubber = <IC2:itemRubber>;
 val gold = <minecraft:gold_ingot>;
 val iron = <minecraft:iron_ingot>;
-val sunPiece = <AdvancedSolarPanel:asp_crafting_items:9>;
+val celShard = <BiomesOPlenty:misc:4>;
 val ichor = <ThaumicTinkerer:kamiResource>;
 val fabric = <Thaumcraft:ItemResource:7>;
 val diamond = <minecraft:diamond>;
-val irglass = <AdvancedSolarPanel:asp_crafting_items:5>;
-val esun = <AdvancedSolarPanel:asp_crafting_items:3>;
 val plutonium = <IC2:itemPlutonium>;
 val charm = <Thaumcraft:ItemResource:15>;
 val aconstr = <Thaumcraft:blockMetalDevice:9>;
@@ -79,7 +77,7 @@ Infusion.addRecipe("WARP_GATE", <Thaumcraft:blockCosmeticSolid:2>, [
 val spearl = <ThaumicTinkerer:skyPearl>;
 Infusion.removeRecipe(spearl);
 Infusion.addRecipe("WARP_GATE", <minecraft:ender_pearl>, [
-    ichor, <ThaumicTinkerer:kamiResource:7>, diamond, <BiomesOPlenty:misc:4>
+    ichor, <ThaumicTinkerer:kamiResource:7>, diamond, celShard
 ], "aer 16, iter 32, alienis 32, volatus 32", spearl * 2, 7);
 Research.refreshResearchRecipe("WARP_GATE");
 
@@ -89,24 +87,9 @@ Arcane.removeRecipe(icloth);
 Arcane.addShaped("ICHOR_CLOTH", icloth * 3, "aer 125, terra 125, ignis 125, aqua 125, ordo 125, perditio 125", [
     [fabric, fabric, fabric],
     [ichor, ichor, ichor],
-    [diamond, sunPiece, diamond]
+    [diamond, celShard, diamond]
 ]);
 Research.refreshResearchRecipe("ICHOR_CLOTH");
-
-#Arcane assembler in Molecular transformer core
-val mtcore = <AdvancedSolarPanel:asp_crafting_items:12>;
-recipes.remove(mtcore);
-Infusion.addRecipe("ASPECTS", <thaumicenergistics:thaumicenergistics.block.arcane.assembler>, [
-    carbon, irglass, carbon, irglass, carbon, irglass, carbon, irglass
-], "fabrico 32, permutatio 32, machina 64", mtcore, 8);
-
-#Enriched sunnarium alloy plutonium and ichor
-recipes.remove(<AdvancedSolarPanel:asp_crafting_items:2>);
-val esuna = <AdvancedSolarPanel:asp_crafting_items:4>;
-recipes.remove(esuna);
-Infusion.addRecipe("ASPECTS", <AdvancedSolarPanel:asp_crafting_items:1>, [
-    ichor, plutonium, esun, ichor, plutonium, esun, ichor, plutonium, esun, ichor, plutonium, esun
-], "ordo 64, lux 64, potentia 64", esuna, 10);
 
 #Light and heavy dynamite
 var dynamite = <ultra_addons:e_dynamite>;
