@@ -5,16 +5,13 @@
 
 #Common items
 val motor = <IC2:itemRecipePart:1>;
-val geari = <ore:gearIron>;
-val gear = <ore:itemBasicGear>;
 val plate = <ore:plateIron>;
-val chassis = <EnderIO:itemMachinePart>;
 val diamond = <ore:gemDiamond>;
 val sharp = <AdvancedMachines:advancedmachines.sharpPlate>;
 val circuit = <IC2:itemPartCircuit>;
-val furnacei = <IC2:blockMachine:1>;
 val coil = <IC2:itemRecipePart:0>;
 val ufc = <IC2:itemFluidCell>;
+val chassis = <ore:itemMachineChassi>;
 
 
 #CuttingEdge sap recipe for thermal centrifuge
@@ -22,15 +19,6 @@ mods.ic2.ThermalCentrifuge.addRecipe([<IC2:itemHarz> * 8, <minecraft:bucket>], <
 
 #Mixed metal ignot recipe moved to enderio config
 recipes.remove(<IC2:itemIngot:4>);
-
-#EnderIO generator
-val gen = <EnderIO:blockStirlingGenerator>;
-recipes.remove(gen);
-recipes.addShaped(gen, [
-    [plate, plate, plate],
-    [<minecraft:furnace>, chassis, <minecraft:furnace>],
-    [gear, <minecraft:piston>, gear]
-]);
 
 #IC2 machine casing
 val case = <IC2:blockMachine>;
@@ -41,29 +29,13 @@ recipes.addShaped(case, [
     [null, plate, null]
 ]);
 
-#Macerator and sag mill
+#Macerator
 val mac = <IC2:blockMachine:3>;
 recipes.remove(mac);
 recipes.addShaped(mac, [
     [sharp, diamond, sharp],
     [motor, case, motor],
     [null, circuit, null]
-]);
-val sag = <EnderIO:blockSagMill>;
-recipes.remove(sag);
-recipes.addShaped(sag, [
-    [sharp, diamond, sharp],
-    [motor, chassis, motor],
-    [geari, <minecraft:piston>, geari]
-]);
-
-#Alloy smelter
-val smelt = <EnderIO:blockAlloySmelter>;
-recipes.remove(smelt);
-recipes.addShaped(smelt, [
-    [plate, furnacei, plate],
-    [furnacei, chassis, furnacei],
-    [plate, <minecraft:cauldron>, plate]
 ]);
 
 #Furnace
