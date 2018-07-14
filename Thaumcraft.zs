@@ -13,4 +13,4 @@ mods.thaumcraft.Arcane.addShaped("ASPECTS", <Thaumcraft:WandCap>, "ordo 5, ignis
     [null, null, null]
 ]);
 
-MetalFormer.addExtrudingRecipe(<Thaumcraft:WandCap>, ironnug *8);
+MetalFormer.addCuttingRecipe(<Thaumcraft:WandCap>, <IC2:itemFuelRod>);
