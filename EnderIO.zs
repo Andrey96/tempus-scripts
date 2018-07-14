@@ -24,6 +24,7 @@ val energa = <ore:ingotEnergeticAlloy>;
 val coald = <ore:dustCoal>;
 val vibra = <ore:ingotVibrantAlloy>; 
 val glowb = <ore:glowstone>;
+val heater = <ImmersiveEngineering:metalDevice:12>;
 
 
 //EnderIO generator
@@ -49,7 +50,7 @@ recipes.remove(smelt);
 recipes.addShaped(smelt, [
     [plate, furnacei, plate],
     [furnacei, chas, furnacei],
-    [plate, <minecraft:cauldron>, plate]
+    [plate, heater, plate]
 ]);
 
 
