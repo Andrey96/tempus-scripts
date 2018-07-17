@@ -7,6 +7,9 @@ val circuit = <IC2:itemPartCircuit>;
 val coil = <IC2:itemRecipePart:0>;
 val ufc = <IC2:itemFluidCell>;
 val chassis = <ore:itemMachineChassi>;
+val advcircuit = <IC2:itemPartCircuitAdv>;
+val gwire = <IC2:itemCable:3>;
+val dlcapacitor = <EnderIO:itemBasicCapacitor:1>;
 
 
 //CuttingEdge sap recipe for thermal centrifuge
@@ -57,4 +60,13 @@ recipes.addShaped(extr, [
     [ufc, motor, ufc],
     [plate, case, plate],
     [null, circuit, null]
+]);
+
+
+//Advanced Circuit
+recipes.remove(advcircuit);
+recipes.addShaped(advcircuit, [
+    [gwire, gwire, gwire],
+    [dlcapacitor, circuit, dlcapacitor],
+    [gwire, gwire, gwire]
 ]);
