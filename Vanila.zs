@@ -236,158 +236,136 @@ val stick = <ore:stickWood>;
 //Pickaxe
 recipes.remove(<minecraft:iron_pickaxe>);
 recipes.addShaped(<minecraft:iron_pickaxe>, [
-    [null, <TConstruct:pickaxeHead:2>, null],
-    [null, stick, null],
-    [null, null, null]
+    [<TConstruct:pickaxeHead:2>, null],
+    [stick, null]
 ]);
 
 recipes.remove(<minecraft:golden_pickaxe>);
 recipes.addShaped(<minecraft:golden_pickaxe>, [
-    [null, <ExtraTiC:pickaxeHead:2000>, null],
-    [null, stick, null],
-    [null, null, null]
+    [<ExtraTiC:pickaxeHead:2000>, null],
+    [stick, null]
 ]);
 
 recipes.remove(<IC2:itemToolBronzePickaxe>);
 recipes.addShaped(<IC2:itemToolBronzePickaxe>, [
-    [null, <TConstruct:pickaxeHead:14>, null],
-    [null, stick, null],
-    [null, null, null]
+    [<TConstruct:pickaxeHead:14>, null],
+    [stick, null]
 ]);
 
 recipes.remove(<Railcraft:tool.steel.pickaxe>);
 recipes.addShaped(<Railcraft:tool.steel.pickaxe>, [
-    [null, <TConstruct:pickaxeHead:16>, null],
-    [null, stick, null],
-    [null, null, null]
+    [<TConstruct:pickaxeHead:16>, null],
+    [stick, null]
 ]);
 
 recipes.remove(<Forestry:bronzePickaxe>);
 recipes.addShaped(<Forestry:bronzePickaxe>, [
-    [null, null, null],
-    [null, stick, null],
-    [null, <TConstruct:pickaxeHead:14>, null]
+    [stick, null],
+    [<TConstruct:pickaxeHead:14>, null]
 ]);
 
 //Shovel
 recipes.remove(<minecraft:iron_shovel>);
 recipes.addShaped(<minecraft:iron_shovel>, [
-    [null, <TConstruct:shovelHead:2>, null],
-    [null, stick, null],
-    [null, null, null]
+    [<TConstruct:shovelHead:2>, null],
+    [stick, null]
 ]);
 
 recipes.remove(<minecraft:golden_shovel>);
 recipes.addShaped(<minecraft:golden_shovel>, [
-    [null, <ExtraTiC:shovelHead:2000>, null],
-    [null, stick, null],
-    [null, null, null]
+    [<ExtraTiC:shovelHead:2000>, null],
+    [stick, null]
 ]);
 
 recipes.remove(<IC2:itemToolBronzeSpade>);
 recipes.addShaped(<IC2:itemToolBronzeSpade>, [
-    [null, <TConstruct:shovelHead:14>, null],
-    [null, stick, null],
-    [null, null, null]
+    [<TConstruct:shovelHead:14>, null],
+    [stick, null]
 ]);
 
 recipes.remove(<Railcraft:tool.steel.shovel>);
 recipes.addShaped(<Railcraft:tool.steel.shovel>, [
-    [null, <TConstruct:shovelHead:16>, null],
-    [null, stick, null],
-    [null, null, null]
+    [<TConstruct:shovelHead:16>, null],
+    [stick, null]
 ]);
 
 recipes.remove(<Forestry:bronzeShovel>);
 recipes.addShaped(<Forestry:bronzeShovel>, [
-    [null, <TConstruct:shovelHead:14>, null],
-    [null, stick, null],
-    [null, null, null]
+    [stick, null],
+    [<TConstruct:shovelHead:14>, null]
 ]);
 
 //Axe
 recipes.remove(<minecraft:iron_axe>);
 recipes.addShaped(<minecraft:iron_axe>, [
-    [null, <TConstruct:hatchetHead:2>, null],
-    [null, stick, null],
-    [null, null, null]
+    [<TConstruct:hatchetHead:2>, null],
+    [stick, null]
 ]);
 
 recipes.remove(<minecraft:golden_axe>);
 recipes.addShaped(<minecraft:golden_axe>, [
-    [null, <ExtraTiC:axeHead:2000>, null],
-    [null, stick, null],
-    [null, null, null]
+    [<ExtraTiC:axeHead:2000>, null],
+    [stick, null]
 ]);
 
 recipes.remove(<IC2:itemToolBronzeAxe>);
 recipes.addShaped(<IC2:itemToolBronzeAxe>, [
-    [null, <TConstruct:hatchetHead:14>, null],
-    [null, stick, null],
-    [null, null, null]
+    [<TConstruct:hatchetHead:14>, null],
+    [stick, null]
 ]);
 
 recipes.remove(<Railcraft:tool.steel.axe>);
 recipes.addShaped(<Railcraft:tool.steel.axe>, [
-    [null, <TConstruct:hatchetHead:16>, null],
-    [null, stick, null],
-    [null, null, null]
+    [<TConstruct:hatchetHead:16>, null],
+    [stick, null]
 ]);
 
 //Sword
 recipes.remove(<minecraft:iron_sword>);
 recipes.addShaped(<minecraft:iron_sword>, [
-    [null, <TConstruct:swordBlade:2>, null],
-    [null, stick, null],
-    [null, null, null]
+    [<TConstruct:swordBlade:2>, null],
+    [stick, null]
 ]);
 
 recipes.remove(<minecraft:golden_sword>);
 recipes.addShaped(<minecraft:golden_sword>, [
-    [null, <ExtraTiC:swordBlade:2000>, null],
-    [null, stick, null],
-    [null, null, null]
+    [<ExtraTiC:swordBlade:2000>, null],
+    [stick, null]
 ]);
 
 recipes.remove(<IC2:itemToolBronzeSword>);
 recipes.addShaped(<IC2:itemToolBronzeSword>, [
-    [null, <TConstruct:swordBlade:14>, null],
-    [null, stick, null],
-    [null, null, null]
+    [<TConstruct:swordBlade:14>, null],
+    [stick, null]
 ]);
 
 recipes.remove(<Railcraft:tool.steel.sword>);
 recipes.addShaped(<Railcraft:tool.steel.sword>, [
-    [null, <TConstruct:swordBlade:16>, null],
-    [null, stick, null],
-    [null, null, null]
+    [<TConstruct:swordBlade:16>, null],
+    [stick, null]
 ]);
 
 //Hoe
 recipes.remove(<minecraft:iron_hoe>);
 recipes.addShaped(<minecraft:iron_hoe>, [
-    [null, null, null],
-    [null, stick, <TConstruct:shovelHead:2>],
-    [null, null, null]
+    [stick, <TConstruct:shovelHead:2>],
+    [null, null]
 ]);
 
 recipes.remove(<minecraft:golden_hoe>);
 recipes.addShaped(<minecraft:golden_hoe>, [
-    [null, null, null],
-    [null, stick,<ExtraTiC:shovelHead:2000>],
-    [null, null, null]
+    [stick, <ExtraTiC:shovelHead:2000>],
+    [null, null]
 ]);
 
 recipes.remove(<IC2:itemToolBronzeHoe>);
 recipes.addShaped(<IC2:itemToolBronzeHoe>, [
-    [null, null, null],
-    [null, stick, <TConstruct:shovelHead:14>],
-    [null, null, null]
+    [stick, <TConstruct:shovelHead:14>],
+    [null, null]
 ]);
 
 recipes.remove(<Railcraft:tool.steel.hoe>);
 recipes.addShaped(<Railcraft:tool.steel.hoe>, [
-    [null, null, null],
-    [null, stick, <TConstruct:shovelHead:16>],
-    [null, null, null]
+    [stick, <TConstruct:shovelHead:16>],
+    [null, null]
 ]);
