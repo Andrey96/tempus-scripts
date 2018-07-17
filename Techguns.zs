@@ -2,12 +2,15 @@
 import mods.nei.NEI;
 import mods.techguns.MetalPress;
 import mods.techguns.ChemLab;
+import mods.techguns.Fabricator;
+import mods.thaumcraft.Arcane;
 
 
 //Items
 val engine = <Techguns:TechgunsAmmo:64>;
 val comp = <ImmersiveEngineering:material:11>;
 val lvwire = <ImmersiveEngineering:coil>;
+val hvwire = <ImmersiveEngineering:coil:2>;
 val redstone = <ore:dustRedstone>;
 val gear = <ore:gearStone>;
 val ecirc = <Techguns:TechgunsAmmo:87>;
@@ -40,6 +43,7 @@ val ognivo = <minecraft:flint_and_steel>;
 val ironbarrel = <Techguns:TechgunsAmmo:27>;
 val woodstock = <Techguns:TechgunsAmmo:26>;
 val glass = <ore:blockGlass>;
+val fquartz = <ore:blockGlassHardened>;
 val ironreciver = <Techguns:TechgunsAmmo:53>;
 val glassplate = <ore:paneGlass>;
 val steelreciver = <Techguns:TechgunsAmmo:54>;
@@ -61,6 +65,8 @@ val inug = <ore:nuggetIron>;
 val minigundrum = <Techguns:TechgunsAmmo:46>;
 val dngplate = <ore:plateDenseGold>;
 val magazinlmg = <Techguns:TechgunsAmmo:20>;
+val cyberparts = <Techguns:TechgunsAmmo:91>;
+var carbonfib = <Techguns:TechgunsAmmo:61>;
 
 
 //Ore Dictionary
@@ -91,21 +97,7 @@ ChemLab.removeRecipe(<Techguns:TechgunsAmmo:70>,null);
 NEI.hide(<Techguns:TechgunsAmmo:70>);
 furnace.remove(<Techguns:TechgunsAmmo:73>);
 NEI.hide(<Techguns:TechgunsAmmo:73>);
-recipes.remove(<Techguns:pistol>.withTag({ammo: -1 as short, camo: 0 as byte}));
-recipes.remove(<Techguns:sawedoff>.withTag({ammo: -1 as short, camo: 0 as byte}));
-recipes.remove(<Techguns:boltaction>.withTag({ammo: -1 as short, camo: 0 as byte}));
-recipes.remove(<Techguns:m4>.withTag({ammo: -1 as short, camo: 0 as byte}));
-recipes.remove(<Techguns:combatshotgun>.withTag({ammo: -1 as short, camo: 0 as byte}));
-recipes.remove(<Techguns:thompson>.withTag({ammo: -1 as short, camo: 0 as byte}));
-recipes.remove(<Techguns:revolver>.withTag({ammo: -1 as short, camo: 0 as byte}));
-recipes.remove(<Techguns:ak47>.withTag({ammo: -1 as short, camo: 0 as byte}));
-recipes.remove(<Techguns:as50>.withTag({ammo: -1 as short, camo: 0 as byte}));
-recipes.remove(<Techguns:pdw>.withTag({ammo: -1 as short, camo: 0 as byte}));
-recipes.remove(<Techguns:mac10>.withTag({ammo: -1 as short, camo: 0 as byte}));
-recipes.remove(<Techguns:grenadelauncher>.withTag({ammo: -1 as short, camo: 0 as byte}));
-recipes.remove(<Techguns:minigun>.withTag({ammo: -1 as short, camo: 0 as byte}));
-recipes.remove(<Techguns:goldenrevolver>.withTag({ammo: -1 as short, camo: 0 as byte}));
-recipes.remove(<Techguns:lmg>.withTag({ammo: -1 as short, camo: 0 as byte}));
+recipes.remove(<Techguns:TechgunsAmmo:1>);
 
 
 //Electric engine
@@ -124,6 +116,15 @@ recipes.addShaped(pump, [
     [engine, bochka, engine],
     [splate, redstone, splate]
 ]);
+
+//Cybernetic parts
+Arcane.addShaped("ASPECTS", cyberparts, "ordo 25, ignis 25", [
+	[null, <IC2:itemToolCutter:*>, <Thaumcraft:ItemBucketPure>],
+    [engine, <Thaumcraft:ItemResource:12>, engine],
+    [hvwire, plasticsheet, hvwire]
+]);
+Fabricator.removeRecipe(cyberparts);
+Fabricator.addRecipe(carbonfib, 1, hvwire, 2, engine, 2, "sheetPlastic", 1, cyberparts);
 
 
 //Chemical Laboratory
@@ -281,121 +282,145 @@ recipes.addShaped(<Techguns:t1_miner_boots>, [
 
 //Weapons
 //9mm Pistol
-recipes.remove(<Techguns:pistol>);
-recipes.addShaped(<Techguns:pistol>.withTag({ammo: 18 as short, camo: 0 as byte}), [
+recipes.remove(<Techguns:pistol:*>);
+recipes.addShaped(<Techguns:pistol>, [
     [sbarrel, splate, plasticsheet],
     [oil, mpartobs, plasticsheet],
     [null, null, magazin9mm]
 ]);
 
 //Sawed Off
-recipes.remove(<Techguns:sawedoff>);
-recipes.addShaped(<Techguns:sawedoff>.withTag({ammo: 2 as short, camo: 0 as byte}), [
+recipes.remove(<Techguns:sawedoff:*>);
+recipes.addShaped(<Techguns:sawedoff>, [
     [ironbarrel, ognivo, woodstock],
     [ironbarrel, ognivo, null],
     [oil, null, null]
 ]);
 
 //Bolt Action Rifle
-recipes.remove(<Techguns:boltaction>);
-recipes.addShaped(<Techguns:boltaction>.withTag({ammo: 6 as short, camo: 0 as byte}), [
+recipes.remove(<Techguns:boltaction:*>);
+recipes.addShaped(<Techguns:boltaction>, [
     [glass, splate, null],
     [sbarrel, ironreciver, woodstock],
     [oil, null, null]
 ]);
 
 //M4 Assault Rifle
-recipes.remove(<Techguns:m4>);
-recipes.addShaped(<Techguns:m4>.withTag({ammo: 30 as short, camo: 0 as byte}), [
+recipes.remove(<Techguns:m4:*>);
+recipes.addShaped(<Techguns:m4>, [
     [null, glassplate, redstone],
     [sbarrel, steelreciver, plasticstock],
     [oil, magazinassault, iplate]
 ]);
 
 //Combat Shotgun
-recipes.remove(<Techguns:combatshotgun>);
-recipes.addShaped(<Techguns:combatshotgun>.withTag({ammo: 8 as short, camo: 0 as byte}), [
+recipes.remove(<Techguns:combatshotgun:*>);
+recipes.addShaped(<Techguns:combatshotgun>, [
     [sbarrel, steelreciver, plasticstock],
     [oil, singot, null],
     [null, null, null]
 ]);
 
 //Submachine Gun
-recipes.remove(<Techguns:thompson>);
-recipes.addShaped(<Techguns:thompson>.withTag({ammo: 20 as short, camo: 0 as byte}), [
+recipes.remove(<Techguns:thompson:*>);
+recipes.addShaped(<Techguns:thompson>, [
     [ironbarrel, ironreciver, woodstock],
     [oil, magazinsmg, null],
     [null, null, null]
 ]);
 
 //Revolver
-recipes.remove(<Techguns:revolver>);
-recipes.addShaped(<Techguns:revolver>.withTag({ammo: 6 as short, camo: 0 as byte}), [
+recipes.remove(<Techguns:revolver:*>);
+recipes.addShaped(<Techguns:revolver>, [
     [ironbarrel, mpartiron, ognivo],
     [oil, woodstock, null],
     [null, null, null]
 ]);
 
 //Kalashnikow
-recipes.remove(<Techguns:ak47>);
-recipes.addShaped(<Techguns:ak47>.withTag({ammo: 30 as short, camo: 0 as byte}), [
+recipes.remove(<Techguns:ak47:*>);
+recipes.addShaped(<Techguns:ak47>, [
     [sbarrel, ironreciver, woodstock],
     [oil, magazinassault, null],
     [log, null, null]
 ]);
 
 //AS50 Sniper Rifle
-recipes.remove(<Techguns:as50>);
-recipes.addShaped(<Techguns:as50>.withTag({ammo: 10 as short, camo: 0 as byte}), [
+recipes.remove(<Techguns:as50:*>);
+recipes.addShaped(<Techguns:as50>, [
     [diamond, obsplate, diamond],
     [sbarrel, sbarrel, obsreciver],
     [oil, magazinas50, plasticstock]
 ]);
 
 //PDW
-recipes.remove(<Techguns:pdw>);
-recipes.addShaped(<Techguns:pdw>.withTag({ammo: 20 as short, camo: 0 as byte}), [
+recipes.remove(<Techguns:pdw:*>);
+recipes.addShaped(<Techguns:pdw>, [
     [carbonbarrel, carbonreciver, carbonstock],
     [oil, magazinadv, null],
     [null, null, null]
 ]);
 
 //Mac 10
-recipes.remove(<Techguns:mac10>);
-recipes.addShaped(<Techguns:mac10>.withTag({ammo: 32 as short, camo: 0 as byte}), [
+recipes.remove(<Techguns:mac10:*>);
+recipes.addShaped(<Techguns:mac10>, [
     [null, plasticsheet, inug],
     [sbarrel, steelreciver, inug],
     [oil, magazinsmg, null]
 ]);
 
 //Grenade Launcher
-recipes.remove(<Techguns:grenadelauncher>);
-recipes.addShaped(<Techguns:grenadelauncher>.withTag({ammo: 6 as short, camo: 0 as byte}), [
+recipes.remove(<Techguns:grenadelauncher:*>);
+recipes.addShaped(<Techguns:grenadelauncher>, [
     [sbarrel, steelreciver, plasticstock],
     [oil, splate, null],
     [null, null, null]
 ]);
 
 //Minigun
-recipes.remove(<Techguns:minigun>);
-recipes.addShaped(<Techguns:minigun>.withTag({ammo: 200 as short, camo: 0 as byte}), [
+recipes.remove(<Techguns:minigun:*>);
+recipes.addShaped(<Techguns:minigun>, [
     [sbarrel, sbarrel, engine],
     [sbarrel, oil, obsreciver],
     [sbarrel, sbarrel, minigundrum]
 ]);
 
 //Golden Revolver
-recipes.remove(<Techguns:goldenrevolver>);
-recipes.addShaped(<Techguns:goldenrevolver>.withTag({ammo: 6 as short, camo: 0 as byte}), [
+recipes.remove(<Techguns:goldenrevolver:*>);
+recipes.addShaped(<Techguns:goldenrevolver>, [
     [dngplate, dngplate, dngplate],
     [dngplate, <Techguns:revolver>, dngplate],
     [dngplate, dngplate, dngplate]
 ]);
 
 //LMG
-recipes.remove(<Techguns:lmg>);
-recipes.addShaped(<Techguns:lmg>.withTag({ammo: 100 as short, camo: 0 as byte}), [
+recipes.remove(<Techguns:lmg:*>);
+recipes.addShaped(<Techguns:lmg>, [
     [null, glassplate, redstone],
     [sbarrel, obsreciver, plasticstock],
-    [oil, magazinlmg, ]
+    [oil, magazinlmg, null]
+]);
+
+//AUG
+recipes.remove(<Techguns:aug:*>);
+recipes.addShaped(<Techguns:aug>, [
+    [glassplate, splate, glassplate],
+    [sbarrel, steelreciver, plasticstock],
+    [oil, plasticsheet, magazinassault]
+]);
+
+//SCAR
+recipes.remove(<Techguns:scar:*>);
+recipes.addShaped(<Techguns:scar>, [
+    [fquartz, plasticsheet, diamond],
+    [sbarrel, obsreciver, plasticstock],
+    [oil, magazinassault, null]
+]);
+
+//VECTOR
+recipes.remove(<Techguns:vector:*>);
+recipes.addShaped(<Techguns:vector>, [
+    [null, glassplate, redstone],
+    [sbarrel, obsreciver, plasticstock],
+    [oil, magazinsmg, null]
 ]);
