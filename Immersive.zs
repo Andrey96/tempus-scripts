@@ -31,6 +31,14 @@ val steelmechan = <ImmersiveEngineering:material:12>;
 val engine = <Techguns:TechgunsAmmo:64>;
 val heavyeng = <ImmersiveEngineering:metalDecoration:5>;
 val electrum = <ore:ingotElectrum>;
+val nodebattery = <CustomItems:ultra_nodebat>; 
+val woodgrip = <ImmersiveEngineering:material:9>;
+val metalbarrel = <ImmersiveEngineering:metalDevice2:7>;
+val airtank = <ImmersiveEngineering:toolupgrade>;
+val bellows = <technom:electricBellows>;
+val pipe = <ImmersiveEngineering:metalDevice2:5>;
+val voiding = <ore:ingotVoid>; 
+val pump = <Techguns:TechgunsAmmo:32>;
 
 
 //Delete
@@ -123,4 +131,22 @@ recipes.addShaped(heavyeng*2, [
     [splate, steelmechan, splate],
     [engine, electrum, engine],
     [splate, steelmechan, splate]
+]);
+
+
+//Chemical Thrower
+recipes.remove(<ImmersiveEngineering:chemthrower>);
+recipes.addShaped(<ImmersiveEngineering:chemthrower>, [
+    [null, airtank, woodgrip],
+    [bellows, heavyeng, woodgrip],
+    [pipe, metalbarrel, nodebattery]
+]);
+
+
+//Mining Drill 
+recipes.remove(<ImmersiveEngineering:drill>);
+mods.thaumcraft.Arcane.addShaped("ASPECTS", <ImmersiveEngineering:drill>, "perditio 50, ignis 50, terra 100", [
+	[voiding, engine, voiding],
+    [pump, heavyeng, voiding],
+    [pipe, metalbarrel, nodebattery]
 ]);

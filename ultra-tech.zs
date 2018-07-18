@@ -71,3 +71,17 @@ mods.thaumcraft.Arcane.addShaped("ASPECTS", <EnderStorage:enderPouch>, "ordo 100
     [fabrick, handimir, fabrick],
     [ifdust, wool, ifdust]
 ]);
+
+
+//Node Battery
+val nodjar = <Thaumcraft:BlockJarNodeItem>;
+val octcapac = <EnderIO:itemBasicCapacitor:2>;
+val balshard = <Thaumcraft:ItemShard:6>;
+val advnodestab = <Thaumcraft:blockStoneDevice:10>;
+val transducer = <Thaumcraft:blockStoneDevice:11>;
+val enchcoil = <technom:itemMaterial:1>;
+mods.thaumcraft.Arcane.addShaped("ASPECTS", <CustomItems:ultra_nodebat>, "ordo 100, aer 100, aqua 100, ignis 100, terra 100, perditio 100", [
+    [balshard, transducer, balshard],
+    [enchcoil, nodjar, enchcoil],
+    [octcapac, advnodestab, octcapac]
+]);
