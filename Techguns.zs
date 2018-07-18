@@ -98,6 +98,37 @@ NEI.hide(<Techguns:TechgunsAmmo:70>);
 furnace.remove(<Techguns:TechgunsAmmo:73>);
 NEI.hide(<Techguns:TechgunsAmmo:73>);
 recipes.remove(<Techguns:TechgunsAmmo:1>);
+recipes.remove(<Techguns:oreDrill>);
+NEI.hide(<Techguns:oreDrill>);
+recipes.remove(<Techguns:oreDrill:1>);
+NEI.hide(<Techguns:oreDrill:1>);
+recipes.remove(<Techguns:oreDrill:2>);
+NEI.hide(<Techguns:oreDrill:2>);
+recipes.remove(<Techguns:oreDrill:3>);
+NEI.hide(<Techguns:oreDrill:3>);
+recipes.remove(<Techguns:oreDrill:4>);
+NEI.hide(<Techguns:oreDrill:4>);
+recipes.remove(<Techguns:oreClusterScanner>);
+NEI.hide(<Techguns:oreClusterScanner>.withTag({Energy: 30000}));
+NEI.hide(<Techguns:oreClusterScanner>);
+recipes.remove(<Techguns:TechgunsAmmo:82>);
+NEI.hide(<Techguns:TechgunsAmmo:82>);
+recipes.remove(<Techguns:TechgunsAmmo:81>);
+NEI.hide(<Techguns:TechgunsAmmo:81>);
+recipes.remove(<Techguns:TechgunsAmmo:80>);
+NEI.hide(<Techguns:TechgunsAmmo:80>);
+recipes.remove(<Techguns:TechgunsAmmo:79>);
+NEI.hide(<Techguns:TechgunsAmmo:79>);
+recipes.remove(<Techguns:TechgunsAmmo:78>);
+NEI.hide(<Techguns:TechgunsAmmo:78>);
+recipes.remove(<Techguns:TechgunsAmmo:75>);
+NEI.hide(<Techguns:TechgunsAmmo:75>);
+recipes.remove(<Techguns:TechgunsAmmo:77>);
+NEI.hide(<Techguns:TechgunsAmmo:77>);
+recipes.remove(<Techguns:TechgunsAmmo:76>);
+NEI.hide(<Techguns:TechgunsAmmo:76>);
+NEI.hide(<Techguns:oreCluster:*>);
+NEI.hide(<Techguns:oreCluster2:*>);
 
 
 //Electric engine
