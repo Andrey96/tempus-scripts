@@ -10,6 +10,10 @@ val chassis = <ore:itemMachineChassi>;
 val advcircuit = <IC2:itemPartCircuitAdv>;
 val gwire = <IC2:itemCable:3>;
 val dlcapacitor = <EnderIO:itemBasicCapacitor:1>;
+val splate = <ore:plateSteel>;
+val elecmotor = <IC2:itemRecipePart:1>;
+val advcase = <IC2:blockMachine:12>;
+val heater = <ImmersiveEngineering:metalDevice:12>;
 
 
 //CuttingEdge sap recipe for thermal centrifuge
@@ -17,6 +21,14 @@ mods.ic2.ThermalCentrifuge.addRecipe([<IC2:itemHarz> * 8, <minecraft:bucket>], <
 
 //Mixed metal ignot recipe moved to enderio config
 recipes.remove(<IC2:itemIngot:4>);
+
+//Thermal Centrifuge
+recipes.remove(<IC2:blockMachine2:3>);
+recipes.addShaped(<IC2:blockMachine2:3>, [
+    [coil, heater, coil],
+    [splate, advcase, splate],
+    [splate, elecmotor, splate]
+]);
 
 //IC2 machine casing
 val case = <IC2:blockMachine>;
