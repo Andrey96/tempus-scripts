@@ -85,3 +85,17 @@ mods.thaumcraft.Arcane.addShaped("ASPECTS", <CustomItems:ultra_nodebat>, "ordo 1
     [enchcoil, nodjar, enchcoil],
     [octcapac, advnodestab, octcapac]
 ]);
+
+
+//Laser Diode Module
+val acircuit = <IC2:itemPartCircuitAdv>;
+val elecsplate = <CustomItems:ultra_plate_els>;
+val coolantcell = <IC2:itemCellEmpty:9>;
+val redcrystal = <Automagy:blockRedcrystalAmp>;
+val mvwire = <ImmersiveEngineering:coil:1>;
+recipes.remove(<CustomItems:ultra_laser>);
+recipes.addShaped(<CustomItems:ultra_laser>, [
+    [elecsplate, mvwire, null],
+    [coolantcell, octcapac, redcrystal],
+    [elecsplate, acircuit, null]
+]);
