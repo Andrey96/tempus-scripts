@@ -1,4 +1,10 @@
+import mods.immersiveengineering.MetalPress;
+import mods.immersiveengineering.Crusher;
+import mods.immersiveengineering.ArcFurnace;
 import mods.nei.NEI;
+import mods.ic2.MetalFormer;
+
+
 //items
 val iblade = <ImmersiveEngineering:material:5>;
 val blade = <ImmersiveEngineering:material:2>;
@@ -37,8 +43,10 @@ val metalbarrel = <ImmersiveEngineering:metalDevice2:7>;
 val airtank = <ImmersiveEngineering:toolupgrade>;
 val bellows = <technom:electricBellows>;
 val pipe = <ImmersiveEngineering:metalDevice2:5>;
-val voiding = <ore:ingotVoid>; 
+val voiding = <ore:ingotVoid>;
 val pump = <Techguns:TechgunsAmmo:32>;
+val wiremold = <CustomItems:ultra_wiremold>;
+
 
 
 //Delete
@@ -150,3 +158,37 @@ mods.thaumcraft.Arcane.addShaped("ASPECTS", <ImmersiveEngineering:drill>, "perdi
     [pump, heavyeng, voiding],
     [pipe, metalbarrel, nodebattery]
 ]);
+
+
+//Plates
+recipes.addShapeless(<ImmersiveEngineering:metal:37>, [<ore:ingotElectrum>, <IC2:itemToolForgeHammer:*>]);
+recipes.addShapeless(<ImmersiveEngineering:metal:37>, [<ore:ingotElectrum>, <ImmersiveEngineering:tool>]);
+MetalFormer.addRollingRecipe(<ImmersiveEngineering:metal:37>, <ImmersiveEngineering:metal:6>);
+<ore:plateElectricalSteel>.add(<CustomItems:ultra_plate_els>);
+MetalPress.addRecipe(<CustomItems:ultra_plate_els>, <ore:ingotElectricalSteel>, <ImmersiveEngineering:mold>, 2000);
+MetalFormer.addRollingRecipe(<CustomItems:ultra_plate_els>, <EnderIO:itemAlloy>);
+<ore:plateDarkSteel>.add(<CustomItems:ultra_plate_ds>);
+MetalPress.addRecipe(<CustomItems:ultra_plate_ds>, <ore:ingotDarkSteel>, <ImmersiveEngineering:mold>, 2000);
+MetalFormer.addRollingRecipe(<CustomItems:ultra_plate_ds>, <EnderIO:itemAlloy:6>);
+
+
+//Wire Coils
+recipes.addShaped(<CustomItems:ultra_wiremold>, [
+    [null, splate, null],
+    [splate, <ImmersiveEngineering:coil:4>, splate],
+    [null, splate, null]
+]);
+MetalPress.addRecipe(<ImmersiveEngineering:coil:0> * 2, <ore:plateCopper>, <CustomItems:ultra_wiremold>, 2000);
+MetalPress.addRecipe(<ImmersiveEngineering:coil:1> * 2, <ore:plateElectrum>, <CustomItems:ultra_wiremold>, 2000);
+MetalPress.addRecipe(<ImmersiveEngineering:coil:2> * 2, <CustomItems:ultra_plate_els>, <CustomItems:ultra_wiremold>, 2000);
+MetalPress.addRecipe(<ImmersiveEngineering:coil:4> * 2, <ore:plateSteel>, <CustomItems:ultra_wiremold>, 2000);
+
+
+//Obsidian dust amount fix
+Crusher.removeRecipe(<IC2:itemDust:11>);
+Crusher.addRecipe(<IC2:itemDust:11>, <ore:blockObsidian>, 4096);
+
+
+//Electrical steel recipe fix
+ArcFurnace.removeRecipe(<EnderIO:itemAlloy>);
+ArcFurnace.addRecipe(<EnderIO:itemAlloy> * 2, <ore:ingotIron>, <ImmersiveEngineering:material:13>, 2000, 2048, [<ore:dustCoal>, <ore:ingotAluminum>, <ore:itemSilicon>], "Alloying");

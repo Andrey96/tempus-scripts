@@ -1,3 +1,5 @@
+import mods.ic2.ThermalCentrifuge;
+
 //Items
 val gen = <EnderIO:blockStirlingGenerator>;
 val plate = <ore:plateIron>;
@@ -26,6 +28,9 @@ val vibra = <ore:ingotVibrantAlloy>;
 val glowb = <ore:glowstone>;
 val heater = <ImmersiveEngineering:metalDevice:12>;
 
+//Silicon
+ThermalCentrifuge.addRecipe([<EnderIO:itemMaterial>], <minecraft:sand>, 1500);
+ThermalCentrifuge.addRecipe([<EnderIO:itemMaterial>], <minecraft:sand:1>, 1500);
 
 //EnderIO generator
 recipes.remove(gen);

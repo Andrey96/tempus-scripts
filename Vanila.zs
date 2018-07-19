@@ -227,11 +227,11 @@ recipes.addShaped(<minecraft:diamond_horse_armor>, [
 val stick = <ore:stickWood>;
 
 //Tools rename
-<minecraft:golden_sword>.displayName = "Constantan Sword";
-<minecraft:golden_shovel>.displayName = "Constantan Shovel";
-<minecraft:golden_pickaxe>.displayName = "Constantan Pickaxe";
-<minecraft:golden_axe>.displayName = "Constantan Axe";
-<minecraft:golden_hoe>.displayName = "Constantan Hoe";
+<minecraft:golden_sword>.displayName = "Polished Constantan Sword";
+<minecraft:golden_shovel>.displayName = "Polished Constantan Shovel";
+<minecraft:golden_pickaxe>.displayName = "Polished Constantan Pickaxe";
+<minecraft:golden_axe>.displayName = "Polished Constantan Axe";
+<minecraft:golden_hoe>.displayName = "Polished Constantan Hoe";
 
 //Pickaxe
 recipes.remove(<minecraft:iron_pickaxe>);
