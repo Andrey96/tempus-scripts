@@ -67,6 +67,9 @@ val dngplate = <ore:plateDenseGold>;
 val magazinlmg = <Techguns:TechgunsAmmo:20>;
 val cyberparts = <Techguns:TechgunsAmmo:91>;
 var carbonfib = <Techguns:TechgunsAmmo:61>;
+val laserfoc = <Techguns:TechgunsAmmo:36>;
+val laserdiod = <CustomItems:ultra_laser>;
+val eingot = <ore:ingotElectrum>;
 
 
 //Ore Dictionary
@@ -129,6 +132,15 @@ recipes.remove(<Techguns:TechgunsAmmo:76>);
 NEI.hide(<Techguns:TechgunsAmmo:76>);
 NEI.hide(<Techguns:oreCluster:*>);
 NEI.hide(<Techguns:oreCluster2:*>);
+
+
+//Laser Barrel
+recipes.remove(<Techguns:TechgunsAmmo:35>);
+recipes.addShaped(<Techguns:TechgunsAmmo:35>, [
+    [eingot, eingot, eingot],
+    [laserdiod, fquartz, laserfoc],
+    [eingot, eingot, eingot]
+]);
 
 
 //Electric engine
