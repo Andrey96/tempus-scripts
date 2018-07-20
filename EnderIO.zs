@@ -1,4 +1,6 @@
 import mods.ic2.ThermalCentrifuge;
+import mods.nei.NEI;
+
 
 //Items
 val gen = <EnderIO:blockStirlingGenerator>;
@@ -27,6 +29,25 @@ val coald = <ore:dustCoal>;
 val vibra = <ore:ingotVibrantAlloy>; 
 val glowb = <ore:glowstone>;
 val heater = <ImmersiveEngineering:metalDevice:12>;
+val dkplate = <ore:plateDarkSteel>;
+val lhelm = <minecraft:leather_helmet>;
+val	lgrud = <minecraft:leather_chestplate>;
+val llegs = <minecraft:leather_leggings>;
+val lbots = <minecraft:leather_boots>;
+val hammer = <ImmersiveEngineering:tool>;
+val bgear = <EnderIO:itemMachinePart:1>;
+val iplate = <ore:plateIron>;
+
+
+//Delete
+recipes.remove(<EnderIO:item.darkSteel_pickaxe>);
+NEI.hide(<EnderIO:item.darkSteel_pickaxe:*>);
+recipes.remove(<EnderIO:item.darkSteel_sword>);
+NEI.hide(<EnderIO:item.darkSteel_sword:*>);
+recipes.remove(<EnderIO:item.darkSteel_axe>);
+NEI.hide(<EnderIO:item.darkSteel_axe:*>);
+vanilla.loot.removeChestLoot("dungeonChest", <EnderIO:item.darkSteel_sword:*>);
+
 
 //Silicon
 ThermalCentrifuge.addRecipe([<EnderIO:itemMaterial>], <minecraft:sand>, 1500);
@@ -91,6 +112,54 @@ recipes.addShaped(ocap, [
 ]);
 
 
+//Dark Armor 
+recipes.remove(<EnderIO:item.darkSteel_helmet>);
+recipes.addShaped(<EnderIO:item.darkSteel_helmet>, [
+    [dkplate, dkplate, dkplate],
+    [dkplate, lhelm, dkplate],
+    [null, hammer, null]
+]);
+
+recipes.remove(<EnderIO:item.darkSteel_chestplate>);
+recipes.addShaped(<EnderIO:item.darkSteel_chestplate>, [
+    [dkplate, hammer, dkplate],
+    [dkplate, lgrud, dkplate],
+    [dkplate, dkplate, dkplate]
+]);
+
+
+recipes.remove(<EnderIO:item.darkSteel_leggings>);
+recipes.addShaped(<EnderIO:item.darkSteel_leggings>, [
+    [dkplate, dkplate, dkplate],
+    [dkplate, llegs, dkplate],
+    [dkplate, hammer, dkplate]
+]);
+
+
+recipes.remove(<EnderIO:item.darkSteel_boots>);
+recipes.addShaped(<EnderIO:item.darkSteel_boots>, [
+    [dkplate, lbots, dkplate],
+    [dkplate, hammer, dkplate],
+    [null, null, null]
+]);
+
+
+//Dark Shears
+recipes.remove(<EnderIO:item.darkSteel_shears>);
+recipes.addShaped(<EnderIO:item.darkSteel_shears>, [
+    [hammer, dkplate, null],
+    [dkplate, bgear, null],
+    [null, null, null]
+]);
+
+
+//
+recipes.remove(<EnderIO:itemYetaWrench>);
+recipes.addShaped(<EnderIO:itemYetaWrench>, [
+    [iplate, null, iplate],
+    [bgear, <BuildCraft|Core:wrenchItem>, bgear],
+    [null, iplate, null]
+]);
 
 
 
