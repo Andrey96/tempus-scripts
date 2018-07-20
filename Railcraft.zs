@@ -64,5 +64,3 @@ recipes.addShaped(sbots, [
     [splate, hammer, splate],
     [null, null, null]
 ]);
-
-]);
