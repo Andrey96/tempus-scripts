@@ -93,9 +93,10 @@ val elecsplate = <CustomItems:ultra_plate_els>;
 val coolantcell = <IC2:itemCellEmpty:9>;
 val redcrystal = <Automagy:blockRedcrystalAmp>;
 val mvwire = <ImmersiveEngineering:coil:1>;
+val doublecap = <EnderIO:itemBasicCapacitor:1>;
 recipes.remove(<CustomItems:ultra_laser>);
 recipes.addShaped(<CustomItems:ultra_laser>, [
     [elecsplate, mvwire, null],
-    [coolantcell, octcapac, redcrystal],
+    [coolantcell, doublecap, redcrystal],
     [elecsplate, acircuit, null]
 ]);
