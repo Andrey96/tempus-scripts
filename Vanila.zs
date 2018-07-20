@@ -85,28 +85,6 @@ recipes.addShaped(ibots, [
     [null, null, null]
 ]);
 
-//Iron Armor Hammeric
-recipes.addShaped(ihelm, [
-    [iplate, lhelm, iplate],
-    [iplate, hammeric, iplate],
-    [null, null, null]
-]);
-recipes.addShaped(igrud, [
-    [iplate, hammeric, iplate],
-    [iplate, lgrud, iplate],
-    [iplate, iplate, iplate]
-]);
-recipes.addShaped(ilegs, [
-    [iplate, llegs, iplate],
-    [iplate, hammeric, iplate],
-    [iplate, null, iplate]
-]);
-recipes.addShaped(ibots, [
-    [iplate, hammeric, iplate],
-    [iplate, lbots, iplate],
-    [null, null, null]
-]);
-
 
 //Gold Armor hammer
 recipes.remove(ghelm);
@@ -134,27 +112,6 @@ recipes.addShaped(gbots, [
     [null, null, null]
 ]);
 
-//Gold Armor Hammeric
-recipes.addShaped(ghelm, [
-    [gplate, lhelm, gplate],
-    [gplate, hammeric, gplate],
-    [null, null, null]
-]);
-recipes.addShaped(ggrud, [
-    [gplate, hammeric, gplate],
-    [gplate, lgrud, gplate],
-    [gplate, gplate, gplate]
-]);
-recipes.addShaped(glegs, [
-    [gplate, llegs, gplate],
-    [gplate, hammeric, gplate],
-    [gplate, null, gplate]
-]);
-recipes.addShaped(gbots, [
-    [gplate, hammeric, gplate],
-    [gplate, lbots, gplate],
-    [null, null, null]
-]);
 
 //Diamond Armor
 recipes.remove(dhelm);
@@ -192,11 +149,7 @@ recipes.addShaped(<minecraft:iron_horse_armor>, [
     [iplate,iplate , iplate],
     [ilegs, hammer, ilegs]
 ]); 
-recipes.addShaped(<minecraft:iron_horse_armor>, [
-    [ihelm, leath, null],
-    [iplate, iplate, iplate],
-    [ilegs, hammeric, ilegs]
-]);
+
 //Gold
 recipes.remove(<minecraft:golden_horse_armor>);
 recipes.addShaped(<minecraft:golden_horse_armor>, [
@@ -204,11 +157,7 @@ recipes.addShaped(<minecraft:golden_horse_armor>, [
     [gplate, gplate, gplate],
     [glegs, hammer, glegs]
 ]);
-recipes.addShaped(<minecraft:golden_horse_armor>, [
-    [ghelm, leath, null],
-    [gplate, gplate, gplate],
-    [glegs, hammeric, glegs]
-]);		
+		
 //Diamond
 recipes.remove(<minecraft:diamond_horse_armor>);
 recipes.addShaped(<minecraft:diamond_horse_armor>, [
@@ -216,11 +165,7 @@ recipes.addShaped(<minecraft:diamond_horse_armor>, [
     [diamond, diamond, diamond],
     [dlegs, null, dlegs]
 ]);
-recipes.addShaped(<minecraft:diamond_horse_armor>, [
-    [dhelm, leath, null],
-    [diamond, diamond, diamond],
-    [dlegs, null, dlegs]
-]);
+
 
 //Tools
 //Items

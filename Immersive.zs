@@ -58,6 +58,9 @@ NEI.hide(<ImmersiveEngineering:metalDevice:1>.withTag({energyStorage: 100000}));
 NEI.hide(<ImmersiveEngineering:metalDevice:7>.withTag({energyStorage: 4000000}));
 
 
+//Ore
+<ore:craftingToolForgeHammer>.add(<ImmersiveEngineering:tool>);
+
 //Blade
 recipes.remove(iblade);
 recipes.addShaped(iblade, [
