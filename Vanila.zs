@@ -6,6 +6,7 @@ val gplate = <ore:plateGold>;
 val iplate = <ore:plateIron>;
 val leath = <ore:itemLeather>;
 val wool = <ore:blockWool>;
+val stick = <ore:stickWood>;
 
 //Leather Armor
 val lhelm = <minecraft:leather_helmet>;
@@ -30,6 +31,17 @@ val dhelm = <minecraft:diamond_helmet>;
 val	dgrud = <minecraft:diamond_chestplate>;
 val dlegs = <minecraft:diamond_leggings>;
 val dbots = <minecraft:diamond_boots>;
+
+
+//Wooden Tools
+<minecraft:wooden_pickaxe>.maxDamage = 10;
+<minecraft:wooden_axe>.maxDamage = 10;
+<minecraft:wooden_shovel>.maxDamage = 10;
+
+//Stone Tools
+<minecraft:stone_pickaxe>.maxDamage = 45;
+<minecraft:stone_shovel>.maxDamage = 45;
+<minecraft:stone_axe>.maxDamage = 45;
 
 
 //Leather Armor
@@ -168,9 +180,6 @@ recipes.addShaped(<minecraft:diamond_horse_armor>, [
 
 
 //Tools
-//Items
-val stick = <ore:stickWood>;
-
 //Tools rename
 <minecraft:golden_sword>.displayName = "Polished Constantan Sword";
 <minecraft:golden_shovel>.displayName = "Polished Constantan Shovel";
