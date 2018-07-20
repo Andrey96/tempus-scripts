@@ -14,6 +14,9 @@ val splate = <ore:plateSteel>;
 val elecmotor = <IC2:itemRecipePart:1>;
 val advcase = <IC2:blockMachine:12>;
 val heater = <ImmersiveEngineering:metalDevice:12>;
+val blbrik = <ImmersiveEngineering:stoneDecoration:2>;
+val ironcasing = <IC2:itemCasing:4>;
+val heatcond = <IC2:itemRecipePart:5>;
 
 
 //CuttingEdge sap recipe for thermal centrifuge
@@ -81,4 +84,13 @@ recipes.addShaped(advcircuit, [
     [gwire, gwire, gwire],
     [dlcapacitor, circuit, dlcapacitor],
     [gwire, gwire, gwire]
+]);
+
+
+//Blast Furnace
+recipes.remove(<IC2:blockMachine3:1>);
+recipes.addShaped(<IC2:blockMachine3:1>, [
+    [blbrik, ironcasing, blbrik],
+    [ironcasing, advcase, ironcasing],
+    [blbrik, heatcond, blbrik]
 ]);
