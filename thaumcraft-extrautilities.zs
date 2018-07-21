@@ -104,7 +104,7 @@ Research.addResearch("TCEU_RING", "TCEU", "volatus 100, spiritus 100, alienis 10
 Research.addPrereq("TCEU_RING", "TCEU_SIGIL", false);
 
 recipes.remove(anyRing);
-Infusion.addRecipe("TCEU_RING", <Thaumcraft:ItemBaubleBlanks:1>, [ichorIngot, ingotStable, batWool, nullLeather, ghastTear, ichorIngot, ingotStable, batWool, nullLeather, ghastTear], "volatus 128, aer 64, motus 64, praecantatio 65", <ExtraUtilities:angelRing:3>, 7);
+Infusion.addRecipe("TCEU_RING", <Thaumcraft:ItemBaubleBlanks:1>, [ichorIngot, ingotStable, batWool, nullLeather, ghastTear, <CustomItems:ultra_nodebat>, <Techguns:TechgunsAmmo:100>, ichorIngot, ingotStable, batWool, nullLeather, ghastTear], "volatus 128, aer 64, motus 64, praecantatio 65", <ExtraUtilities:angelRing:3>, 7);
 Arcane.addShapeless("TCEU_RING", <ExtraUtilities:angelRing:0>, "aer 15, ignis 15", [anyRing, glassPane, glassPane]);
 Arcane.addShapeless("TCEU_RING", <ExtraUtilities:angelRing:1>, "aer 15", [anyRing, feather, feather]);
 Arcane.addShapeless("TCEU_RING", <ExtraUtilities:angelRing:2>, "aer 15", [anyRing, pixieDust, pixieDust]);

@@ -233,6 +233,36 @@ recipes.addShaped(coil, [
 ]);
 
 
+//Heavy Cloth
+recipes.remove(cloth);
+recipes.addShapeless(cloth, [<ore:fabricHemp>, <ore:materialHardenedleather>]);
+
+
+//Glider Backpack
+recipes.remove(<Techguns:TechgunsAmmo:59>);
+recipes.addShaped(<Techguns:TechgunsAmmo:59>, [
+    [cloth, cloth, cloth],
+    [<ore:plateSteel>, cloth, <ore:plateSteel>],
+    [cloth, cloth, cloth]
+]);
+
+
+//Glider Wing
+recipes.remove(<Techguns:TechgunsAmmo:58>);
+recipes.addShaped(<Techguns:TechgunsAmmo:58>, [
+    [<ore:plateSteel>, <ore:plateSteel>],
+    [<ImmersiveEngineering:material:5>, <ImmersiveEngineering:material:5>]
+]);
+
+
+//Antigravity Device
+recipes.remove(<Techguns:antiGravPack>);
+recipes.addShaped(<Techguns:antiGravPack>, [
+    [<ore:plateTitanium>, <Techguns:TechgunsAmmo:106>, <ore:plateTitanium>],
+    [<ore:circuitAdvanced>, <Techguns:TechgunsAmmo:100>, <ore:circuitAdvanced>],
+    [<GraviSuite:itemSimpleItem:3>, <Techguns:TechgunsAmmo:59>, <GraviSuite:itemSimpleItem:3>]
+]);
+
 //Soldier's set
 recipes.remove(<Techguns:t1_combat_helmet>);
 recipes.addShaped(<Techguns:t1_combat_helmet>, [
