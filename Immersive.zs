@@ -46,7 +46,10 @@ val pipe = <ImmersiveEngineering:metalDevice2:5>;
 val voiding = <ore:ingotVoid>;
 val pump = <Techguns:TechgunsAmmo:32>;
 val wiremold = <CustomItems:ultra_wiremold>;
-
+val eplate = <ore:plateElectrum>;
+val elesteelplate = <CustomItems:ultra_plate_els>;
+val engwirecutter = <ImmersiveEngineering:tool:1>;
+val stick = <ore:stickWood>;
 
 
 //Delete
@@ -61,12 +64,45 @@ NEI.hide(<ImmersiveEngineering:metalDevice:7>.withTag({energyStorage: 4000000}))
 //Ore
 <ore:craftingToolForgeHammer>.add(<ImmersiveEngineering:tool>);
 
+
+//Wires
+//LV
+recipes.remove(<ImmersiveEngineering:coil>);
+recipes.addShaped(<ImmersiveEngineering:coil>, [
+    [engwirecutter, cplate],
+    [splate, stick]
+]);
+
+//MV
+recipes.remove(<ImmersiveEngineering:coil:1>);
+recipes.addShaped(<ImmersiveEngineering:coil:1>, [
+    [engwirecutter, eplate],
+    [eplate, stick]
+]);
+
+//HV
+recipes.remove(<ImmersiveEngineering:coil:2>);
+recipes.addShaped(<ImmersiveEngineering:coil:2>, [
+    [engwirecutter, elesteelplate],
+    [elesteelplate, stick]
+]);
+
+
 //Blade
 recipes.remove(iblade);
 recipes.addShaped(iblade, [
     [null, tfabric,efabric ],
     [tfabric, blade, tfabric],
     [efabric, tfabric,null ]
+]);
+
+
+//Hammer
+recipes.remove(<ImmersiveEngineering:tool>);
+recipes.addShaped(<ImmersiveEngineering:tool>, [
+    [<ore:ingotIron>, <ore:ingotIron>, <minecraft:string>],
+    [null, stick, <ore:ingotIron>],
+    [stick, null, <ore:ingotIron>]
 ]);
 
 
@@ -181,10 +217,10 @@ recipes.addShaped(<CustomItems:ultra_wiremold>, [
     [splate, <ImmersiveEngineering:coil:4>, splate],
     [null, splate, null]
 ]);
-MetalPress.addRecipe(<ImmersiveEngineering:coil:0> * 2, <ore:plateCopper>, <CustomItems:ultra_wiremold>, 2000);
-MetalPress.addRecipe(<ImmersiveEngineering:coil:1> * 2, <ore:plateElectrum>, <CustomItems:ultra_wiremold>, 2000);
-MetalPress.addRecipe(<ImmersiveEngineering:coil:2> * 2, <CustomItems:ultra_plate_els>, <CustomItems:ultra_wiremold>, 2000);
-MetalPress.addRecipe(<ImmersiveEngineering:coil:4> * 2, <ore:plateSteel>, <CustomItems:ultra_wiremold>, 2000);
+MetalPress.addRecipe(<ImmersiveEngineering:coil:0> * 2, <ore:ingotCopper>, <CustomItems:ultra_wiremold>, 2000);
+MetalPress.addRecipe(<ImmersiveEngineering:coil:1> * 2, <ore:ingotElectrum>, <CustomItems:ultra_wiremold>, 2000);
+MetalPress.addRecipe(<ImmersiveEngineering:coil:2> * 2, <ore:ingotElectricalSteel>, <CustomItems:ultra_wiremold>, 2000);
+MetalPress.addRecipe(<ImmersiveEngineering:coil:4> * 2, <ore:ingotSteel>, <CustomItems:ultra_wiremold>, 2000);
 
 
 //Obsidian dust amount fix
