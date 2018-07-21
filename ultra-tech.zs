@@ -73,6 +73,11 @@ mods.thaumcraft.Arcane.addShaped("ASPECTS", <EnderStorage:enderPouch>, "ordo 100
 ]);
 
 
+//Bee swax
+mods.ic2.Compressor.addRecipe(<harvestcraft:beeswaxItem>, <Forestry:beeswax>);
+recipes.addShapeless(<harvestcraft:beeswaxItem>, [<Forestry:beeswax>, <ore:craftingToolForgeHammer>]);
+
+
 //Node Battery
 val nodjar = <Thaumcraft:BlockJarNodeItem>;
 val octcapac = <EnderIO:itemBasicCapacitor:2>;
@@ -105,3 +110,20 @@ recipes.addShaped(<CustomItems:ultra_laser>, [
 //Steel Witching Gadgets
 mods.witchinggadgets.InfernalBlastfurnace.removeRecipe(<IC2:itemIngot:3>);
 mods.witchinggadgets.InfernalBlastfurnace.removeRecipe(<IC2:blockMetal:5>);
+
+
+//Mana Steel
+recipes.remove(<Botania:turntable>);
+recipes.remove(<Botania:spreader>);
+mods.thaumcraft.Arcane.addShaped("ASPECTS", <Botania:spreader>, "aer 10", [
+	[<Botania:turntable>, <Botania:turntable>, <Botania:turntable>],
+	[<ore:ingotGold>, <Botania:petal:*>, null],
+	[<Botania:turntable>, <Botania:turntable>, <Botania:turntable>]
+]);
+
+	
+//Spreader Turntable
+mods.botania.ManaInfusion.removeRecipe(<Botania:storage>);
+mods.botania.ManaInfusion.removeRecipe(<Botania:manaResource>);
+mods.botania.ManaInfusion.addInfusion(<Botania:manaResource>, <ore:ingotSteel>, 3000);
+mods.botania.ManaInfusion.addInfusion(<Botania:storage>, <ore:blockSteel>, 27000);
