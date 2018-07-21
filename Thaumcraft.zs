@@ -24,7 +24,7 @@ MetalFormer.addExtrudingRecipe(<Thaumcraft:WandCap>, <CustomItems:ultra_iron_cir
 //Node Transducer
 mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:blockStoneDevice:11>);
 mods.thaumcraft.Arcane.addShaped("VOIDMETAL", <Thaumcraft:blockStoneDevice:11>, "aer 32, ignis 32, perditio 32", [
-	[redblock, laserfocus, redblock],
+	[redblock, <CustomItems:ultra_laser>, redblock],
     [iron, <Thaumcraft:blockStoneDevice:9>, iron],
     [redblock, nitor, redblock]
 ]);
