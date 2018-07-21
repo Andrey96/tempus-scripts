@@ -1,7 +1,4 @@
-/**
- * Misc stuff that makes tech mods more interesting (and a bit harder).
- * By Andrey96 for Ultra.
- */
+import mods.ic2.OreWasher;
 #Copter pack
 val copterBlades = <adventurebackpack:backpackComponent:6>;
 recipes.remove(copterBlades);
@@ -127,3 +124,7 @@ mods.botania.ManaInfusion.removeRecipe(<Botania:storage>);
 mods.botania.ManaInfusion.removeRecipe(<Botania:manaResource>);
 mods.botania.ManaInfusion.addInfusion(<Botania:manaResource>, <ore:ingotSteel>, 3000);
 mods.botania.ManaInfusion.addInfusion(<Botania:storage>, <ore:blockSteel>, 27000);
+
+
+//Graphite Dust (Big Reactors)
+OreWasher.addRecipe([<BigReactors:BRIngot:6>], <ImmersiveEngineering:metal:19>, 100);

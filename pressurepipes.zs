@@ -1,5 +1,5 @@
 
-val esteel = <ore:ingotElectricalSteel>;
+val esteel = <ore:plateElectricalSteel>;
 val piron = <ore:ingotPulsatingIron>;
 val aplate = <ore:plateAluminum>;
 val fpipe = <ImmersiveEngineering:metalDevice2:5>;
