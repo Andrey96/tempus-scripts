@@ -100,3 +100,8 @@ recipes.addShaped(<CustomItems:ultra_laser>, [
     [coolantcell, doublecap, redcrystal],
     [elecsplate, acircuit, null]
 ]);
+
+
+//Steel Witching Gadgets
+mods.witchinggadgets.InfernalBlastfurnace.removeRecipe(<IC2:itemIngot:3>);
+mods.witchinggadgets.InfernalBlastfurnace.removeRecipe(<IC2:blockMetal:5>);
