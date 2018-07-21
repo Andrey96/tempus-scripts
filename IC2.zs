@@ -17,6 +17,14 @@ val heater = <ImmersiveEngineering:metalDevice:12>;
 val blbrik = <ImmersiveEngineering:stoneDecoration:2>;
 val ironcasing = <IC2:itemCasing:4>;
 val heatcond = <IC2:itemRecipePart:5>;
+val bronzplate = <ore:plateBronze>;
+val hammer = <ImmersiveEngineering:tool>;
+
+//Leather Armor
+val lhelm = <minecraft:leather_helmet>;
+val	lgrud = <minecraft:leather_chestplate>;
+val llegs = <minecraft:leather_leggings>;
+val lbots = <minecraft:leather_boots>;
 
 
 //CuttingEdge sap recipe for thermal centrifuge
@@ -93,4 +101,34 @@ recipes.addShaped(<IC2:blockMachine3:1>, [
     [blbrik, ironcasing, blbrik],
     [ironcasing, advcase, ironcasing],
     [blbrik, heatcond, blbrik]
+]);
+
+
+//Bronze Armor
+recipes.remove(<IC2:itemArmorBronzeHelmet>);
+recipes.addShaped(<IC2:itemArmorBronzeHelmet>, [
+    [bronzplate, bronzplate, bronzplate],
+    [bronzplate, lhelm, bronzplate],
+    [null, null, null]
+]);
+
+recipes.remove(<IC2:itemArmorBronzeChestplate>);
+recipes.addShaped(<IC2:itemArmorBronzeChestplate>, [
+    [bronzplate, hammer, bronzplate],
+    [bronzplate, lgrud, bronzplate],
+    [bronzplate, bronzplate, bronzplate]
+]);
+
+recipes.remove(<IC2:itemArmorBronzeLegs>);
+recipes.addShaped(<IC2:itemArmorBronzeLegs>, [
+    [bronzplate, bronzplate, bronzplate],
+    [bronzplate, llegs, bronzplate],
+    [bronzplate, hammer, bronzplate]
+]);
+
+recipes.remove(<IC2:itemArmorBronzeBoots>);
+recipes.addShaped(<IC2:itemArmorBronzeBoots>, [
+    [bronzplate, lbots, bronzplate],
+    [bronzplate, hammer, bronzplate],
+    [null, null, null]
 ]);
