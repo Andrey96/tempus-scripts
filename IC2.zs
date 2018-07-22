@@ -19,6 +19,10 @@ val ironcasing = <IC2:itemCasing:4>;
 val heatcond = <IC2:itemRecipePart:5>;
 val bronzplate = <ore:plateBronze>;
 val hammer = <ImmersiveEngineering:tool>;
+val advalloy = <IC2:itemPartAlloy>;
+val lapcrystal = <IC2:itemBatLamaCrystal:*>;
+val laserbarrel = <Techguns:TechgunsAmmo:35>;
+val redstone = <ore:dustRedstone>;
 
 //Leather Armor
 val lhelm = <minecraft:leather_helmet>;
@@ -131,4 +135,13 @@ recipes.addShaped(<IC2:itemArmorBronzeBoots>, [
     [bronzplate, lbots, bronzplate],
     [bronzplate, hammer, bronzplate],
     [null, null, null]
+]);
+
+
+//Mining Laser
+recipes.remove(<IC2:itemToolMiningLaser:*>);
+recipes.addShaped(<IC2:itemToolMiningLaser>, [
+	[laserbarrel, redstone, lapcrystal],
+	[advalloy, advalloy, advcircuit],
+	[null, <IC2:itemTurningBlanks:274978>.onlyWithTag({state: {l0: 4, l1: 3, l2: 2, l3: 2, l4: 2}}), advalloy]
 ]);
