@@ -37,6 +37,8 @@ val lbots = <minecraft:leather_boots>;
 val hammer = <ImmersiveEngineering:tool>;
 val bgear = <EnderIO:itemMachinePart:1>;
 val iplate = <ore:plateIron>;
+val pulsnug = <EnderIO:itemMaterial:3>;
+val conduitbind = <EnderIO:itemMaterial:1>;
 
 
 //Delete
@@ -153,7 +155,7 @@ recipes.addShaped(<EnderIO:item.darkSteel_shears>, [
 ]);
 
 
-//
+//Yeta Wrench
 recipes.remove(<EnderIO:itemYetaWrench>);
 recipes.addShaped(<EnderIO:itemYetaWrench>, [
     [iplate, null, iplate],
@@ -162,7 +164,13 @@ recipes.addShaped(<EnderIO:itemYetaWrench>, [
 ]);
 
 
-
+//Item Conduit
+recipes.remove(<EnderIO:itemItemConduit>);
+mods.thaumcraft.Arcane.addShaped("ASPECTS", <EnderIO:itemItemConduit> * 6, "perditio 2, ordo 2, terra 2", [
+    [conduitbind, conduitbind, conduitbind],
+    [pulsnug, pulsnug, pulsnug],
+    [conduitbind, conduitbind, conduitbind]
+]);
 
 
 
