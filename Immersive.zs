@@ -237,7 +237,7 @@ ArcFurnace.addRecipe(<EnderIO:itemAlloy> * 2, <ore:ingotIron>, <ImmersiveEnginee
 
 //Conveyor Belt
 recipes.remove(<ImmersiveEngineering:metalDevice:11>);
-recipes.addShaped(<ImmersiveEngineering:metalDevice:11>*2, [
+recipes.addShaped(<ImmersiveEngineering:metalDevice:11>*4, [
     [rubbersheet, rubbersheet, rubbersheet],
     [engine, igear, engine],
     [null, null, null]
