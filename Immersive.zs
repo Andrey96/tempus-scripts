@@ -50,6 +50,8 @@ val eplate = <ore:plateElectrum>;
 val elesteelplate = <CustomItems:ultra_plate_els>;
 val engwirecutter = <ImmersiveEngineering:tool:1>;
 val stick = <ore:stickWood>;
+val rubbersheet = <IC2:blockRubber>;
+val igear = <ore:gearIron>;
 
 
 //Delete
@@ -231,3 +233,12 @@ Crusher.addRecipe(<IC2:itemDust:11>, <ore:blockObsidian>, 4096);
 //Electrical steel recipe fix
 ArcFurnace.removeRecipe(<EnderIO:itemAlloy>);
 ArcFurnace.addRecipe(<EnderIO:itemAlloy> * 2, <ore:ingotIron>, <ImmersiveEngineering:material:13>, 2000, 2048, [<ore:dustCoal>, <ore:ingotAluminum>, <ore:itemSilicon>], "Alloying");
+
+
+//Conveyor Belt
+recipes.remove(<ImmersiveEngineering:metalDevice:11>);
+recipes.addShaped(<ImmersiveEngineering:metalDevice:11>*2, [
+    [rubbersheet, rubbersheet, rubbersheet],
+    [engine, igear, engine],
+    [null, null, null]
+]);
