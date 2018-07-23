@@ -14,6 +14,8 @@ val iplate = <ore:plateIron>;
 val fluxblock = <appliedenergistics2:tile.BlockFluix>;
 val lampgrowth = <Thaumcraft:blockMetalDevice:8>;
 val mecable = <appliedenergistics2:item.ItemMultiPart:16>;
+val engprocessor = <appliedenergistics2:item.ItemMultiMaterial:24>;
+val conveer = <ImmersiveEngineering:metalDevice:11>;
 
 
 //Delete
@@ -102,8 +104,9 @@ recipes.addShaped(<appliedenergistics2:tile.BlockSkyCompass>, [
 
 
 //Inscriber
-recipes.remove(<appliedenergistics2:tile.BlockInscriber>);
-recipes.addShaped(<appliedenergistics2:tile.BlockInscriber>, [
+val inscriber = <appliedenergistics2:tile.BlockInscriber>;
+recipes.remove(inscriber);
+recipes.addShaped(inscriber, [
     [splate, fluixcrystal, splate],
     [splate, quartzglass, quartzglass],
     [splate, <IC2:blockMachine2:4>, splate]
@@ -111,9 +114,30 @@ recipes.addShaped(<appliedenergistics2:tile.BlockInscriber>, [
 
 
 //Crystal Growth Accelerator
-recipes.remove(<appliedenergistics2:tile.BlockQuartzGrowthAccelerator>);
-recipes.addShaped(<appliedenergistics2:tile.BlockQuartzGrowthAccelerator>, [
+val crystalgrwoth = <appliedenergistics2:tile.BlockQuartzGrowthAccelerator>;
+recipes.remove(crystalgrwoth);
+recipes.addShaped(crystalgrwoth, [
     [iplate, lampgrowth, iplate],
     [quartzglass, fluxblock, quartzglass],
     [iplate, mecable, iplate]
 ]);
+
+
+//AE2 Stuff
+//Advanced Inscriber
+recipes.remove(<ae2stuff:Inscriber>);
+recipes.addShaped(<ae2stuff:Inscriber>, [
+	[ splate, engprocessor, splate],
+    [ conveer, inscriber, conveer],
+    [ splate, engprocessor, splate]
+]);
+
+
+//Crystal Growth Chamber
+recipes.remove(<ae2stuff:Grower>);
+recipes.addShaped(<ae2stuff:Grower>, [
+    [ crystalgrwoth, engprocessor, crystalgrwoth],
+    [ crystalgrwoth, <ore:chestWood>, crystalgrwoth],
+    [ crystalgrwoth, engprocessor, crystalgrwoth]
+]);
+//AE2 Stuff
