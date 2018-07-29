@@ -48,7 +48,7 @@ val pump = <Techguns:TechgunsAmmo:32>;
 val wiremold = <CustomItems:ultra_wiremold>;
 val eplate = <ore:plateElectrum>;
 val elesteelplate = <CustomItems:ultra_plate_els>;
-val engwirecutter = <ImmersiveEngineering:tool:1>;
+val cutter = <ore:craftingToolWireCutter>;
 val stick = <ore:stickWood>;
 val rubbersheet = <IC2:blockRubber>;
 val igear = <ore:gearIron>;
@@ -70,23 +70,30 @@ NEI.hide(<ImmersiveEngineering:metalDevice:7>.withTag({energyStorage: 4000000}))
 //Wires
 //LV
 recipes.remove(<ImmersiveEngineering:coil>);
-recipes.addShaped(<ImmersiveEngineering:coil>, [
-    [engwirecutter, cplate],
-    [splate, stick]
+recipes.addShaped(<ImmersiveEngineering:coil> * 2, [
+    [cutter, cplate],
+    [cplate, stick]
 ]);
 
 //MV
 recipes.remove(<ImmersiveEngineering:coil:1>);
-recipes.addShaped(<ImmersiveEngineering:coil:1>, [
-    [engwirecutter, eplate],
+recipes.addShaped(<ImmersiveEngineering:coil:1> * 2, [
+    [cutter, eplate],
     [eplate, stick]
 ]);
 
 //HV
 recipes.remove(<ImmersiveEngineering:coil:2>);
-recipes.addShaped(<ImmersiveEngineering:coil:2>, [
-    [engwirecutter, elesteelplate],
+recipes.addShaped(<ImmersiveEngineering:coil:2> * 2, [
+    [cutter, elesteelplate],
     [elesteelplate, stick]
+]);
+
+//Steel decorative wire
+recipes.remove(<ImmersiveEngineering:coil:4>);
+recipes.addShaped(<ImmersiveEngineering:coil:4> * 2, [
+    [cutter, splate],
+    [splate, stick]
 ]);
 
 
@@ -119,7 +126,7 @@ recipes.addShaped(kinetic, [
 
 //Blast Bricks
 recipes.remove(blastbricks);
-mods.thaumcraft.Arcane.addShaped("ASPECTS", blastbricks *2, "ordo 5, ignis 5", [
+mods.thaumcraft.Arcane.addShaped("ASPECTS", blastbricks *2, "ordo 3, ignis 3", [
 	[nbricks, bricks, nbricks],
     [bricks, blazep, bricks],
     [nbricks, bricks, nbricks]

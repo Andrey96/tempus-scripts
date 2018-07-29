@@ -1,6 +1,6 @@
 var gun1 = <GraviGun:GraviGun>;
 var gun2 = <GraviGun:GraviGun:1>;
-var laser = <IC2:itemToolMiningLaser:*>;
+var laser = <CustomItems:ultra_laser>;
 var alloy = <IC2:itemPartAlloy>;
 var irid = <IC2:itemPartIridium>;
 var telep = <IC2:blockMachine2>;
