@@ -17,7 +17,7 @@ mods.thaumcraft.Arcane.addShaped("ASPECTS", <Thaumcraft:WandCap>, "ordo 5, ignis
     [null, null, null]
 ]);
 
-recipes.addShapeless(<CustomItems:ultra_iron_circle>, [<ore:plateIron>, <IC2:itemToolCutter>]);
+recipes.addShapeless(<CustomItems:ultra_iron_circle>, [<ore:plateIron>, <IC2:itemToolCutter:*>]);
 MetalFormer.addExtrudingRecipe(<Thaumcraft:WandCap>, <CustomItems:ultra_iron_circle>);
 
 
