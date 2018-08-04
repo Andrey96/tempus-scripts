@@ -173,13 +173,10 @@ mods.thaumcraft.Arcane.addShaped("ASPECTS", <EnderIO:itemItemConduit> * 6, "perd
 ]);
 
 
-
-
-
-
-
-
-
-
-
-
+//Basic Capasitor Bank
+recipes.remove(<EnderIO:blockCapBank:1>);
+recipes.addShaped(<EnderIO:blockCapBank:1>, [
+    [iplate, bcap, iplate],
+    [bcap, <ImmersiveEngineering:metalDevice:3>, bcap],
+    [iplate, bcap, iplate]
+]);
