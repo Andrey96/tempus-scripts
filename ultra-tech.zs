@@ -35,7 +35,7 @@ mods.thaumcraft.Arcane.addShaped("ASPECTS", <BiomesOPlenty:misc:4> *2, "ordo 50,
 //Ender storage
 //Items
 val itemmir = <Thaumcraft:blockMirror>;
-val fluidmir = <Automagy:blockMirrorAlt>;
+val fluidmir = <Thaumcraft:blockMirror:6>;
 val handimir = <Thaumcraft:HandMirror>;
 val chest = <ore:chest>;
 val jar = <Thaumcraft:BlockJarFilledItem>;
@@ -50,7 +50,7 @@ recipes.remove(<EnderStorage:enderChest:*>);
 mods.thaumcraft.Arcane.addShaped("ASPECTS", <EnderStorage:enderChest>, "ordo 100, aer 100, aqua 100", [
     [ifstick, wool, ifstick],
     [voidblock, chest, voidblock],
-    [ifstick, itemmir, ifdust]
+    [ifstick, itemmir, ifstick]
 ]);
 
 //Ender Tank
@@ -58,7 +58,7 @@ recipes.remove(<EnderStorage:enderChest:*>);
 mods.thaumcraft.Arcane.addShaped("ASPECTS", <EnderStorage:enderChest:4096>, "ordo 100, aer 100, aqua 100", [
     [ifstick, wool, ifstick],
     [voidblock, jar, voidblock],
-    [ifdust, fluidmir, ifstick]
+    [ifstick, fluidmir, ifstick]
 ]);
 
 //Ender Pouch

@@ -234,7 +234,8 @@ MetalPress.addRecipe(<ImmersiveEngineering:coil:4> * 2, <ore:ingotSteel>, <Custo
 
 //Obsidian dust amount fix
 Crusher.removeRecipe(<IC2:itemDust:11>);
-Crusher.addRecipe(<IC2:itemDust:11>, <ore:blockObsidian>, 4096);
+Crusher.addRecipe(<Railcraft:cube:4>, <ore:blockObsidian>, 4096, <IC2:itemDust:11>, 0.25);
+Crusher.addRecipe(<IC2:itemDust:11>, <Railcraft:cube:4>, 2048, <IC2:itemDust:11>, 0.25);
 
 
 //Electrical steel recipe fix
